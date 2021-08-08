@@ -1,61 +1,60 @@
 public class Binarysearch
- { //binary search method
+ { 
+     /////////////////////////////
     public static int binarySearch(int a[], int f, int l, int k)
-    {   int mid;
+    {   
+        int mid;
          mid=f+(l-f)/2;
          int flag=-1;
          
         //checking the order type of the given array 
             if(a[f]<a[l])
             {
-         return flag=1;
+                return flag=1;
             }
-            else 
-            {
-                return flag=-1;
-                
-            }
+          
             
-    if(flag==1)
-    {
+   
+       if(flag==1)
+      {
      
         System.out.println("The array is in Ascending order");
             
             if(k==a[mid])// mid is the element
             {
+            System.out.println(mid);
             return mid;
             }
             else if(k<a[mid]) // searching in the left side of arr
             {
-        l=mid-1;
+               l=mid-1;
             }
             else // searching in the right side of the arr
             {
              f=mid+1;   
             }  
-    }
+       }
     
-    else 
-    {
+      else 
+      {
         System.out.println("The array is in Descending order");
          if(k==a[mid]) // mid is the element 
             {
-            return mid;
+            System.out.println(mid);
+             return mid;
             }
             else if(k<a[mid]) // searching the right side of the arr
             {
-        f=mid+1;
+              f=mid+1;
             }
             else // searching the left side of the arr
             {
-             l=mid-1;   
+               l=mid-1;   
             }  
-    }
-    }
-        
-        
-        
-    }
+         }
+    return flag;
+    
+     }
     
     // main method 
     public static void main(String[] args)
