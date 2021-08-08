@@ -1,0 +1,32 @@
+public class Binarysearch
+ { //binary search method
+    public static int binarySearch(int a[], int f, int l, int k)
+    {   int mid;
+         mid=f+l-f/2;
+        
+            if(k==a[mid])
+            {
+                System.out.println(mid);
+                
+            }
+            else if(k<a[mid])
+            {
+                return binarySearch(a, f, mid+1, k);
+            }
+            else
+            {
+                return binarySearch(a, f, mid-1, k);
+            }  
+        
+        return k;
+        
+    }
+    // main method 
+    public static void main(String[] args)
+    {
+        int a[]={40,30,20,10};
+        int k=10;
+        int l=a.length-1;
+        binarySearch(a,0,l,k);
+    }
+}
