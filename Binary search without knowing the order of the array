@@ -2,42 +2,65 @@ public class Binarysearch
  { //binary search method
     public static int binarySearch(int a[], int f, int l, int k)
     {   int mid;
-         mid=f+l-f/2;
+         mid=f+(l-f)/2;
+         int flag=-1;
+         
         //checking the order type of the given array 
-            if(a[0]<a[1])
+            if(a[f]<a[l])
             {
-                System.out.println("ascending order");
-                
+         return flag=1;
             }
             else 
             {
-                System.out.println("descending order");
-            }
-            
-    
-        //binary search 
-            if(k==a[mid])
-            {
-                System.out.println(mid);
+                return flag=-1;
                 
             }
-            else if(k<a[mid])
+            
+    if(flag==1)
+    {
+     
+        System.out.println("The array is in Ascending order");
+            
+            if(k==a[mid])// mid is the element
             {
-                return binarySearch(a, f, mid+1, k);
+            return mid;
             }
-            else
+            else if(k<a[mid]) // searching in the left side of arr
             {
-                return binarySearch(a, f, mid-1, k);
+        l=mid-1;
+            }
+            else // searching in the right side of the arr
+            {
+             f=mid+1;   
             }  
+    }
+    
+    else 
+    {
+        System.out.println("The array is in Descending order");
+         if(k==a[mid]) // mid is the element 
+            {
+            return mid;
+            }
+            else if(k<a[mid]) // searching the right side of the arr
+            {
+        f=mid+1;
+            }
+            else // searching the left side of the arr
+            {
+             l=mid-1;   
+            }  
+    }
+    }
         
-        return k;
+        
         
     }
     
     // main method 
     public static void main(String[] args)
     {
-        int a[]={40,30,20,10};
+        int a[]={50,40,30,20,10};
         int k=30;
         int l=a.length-1;
         binarySearch(a,0,l,k);
