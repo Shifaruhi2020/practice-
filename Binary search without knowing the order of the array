@@ -1,6 +1,6 @@
 public class Binarysearch
  { 
-     /////////////////////////////
+     
     public static int binarySearch(int a[], int f, int l, int k)
     {   
         int mid;
@@ -14,8 +14,8 @@ public class Binarysearch
             }
           
             
-   
-       if(flag==1)
+   ///performing the search//
+       if(flag==1) /// for ascending order
       {
      
         System.out.println("The array is in Ascending order");
@@ -35,7 +35,7 @@ public class Binarysearch
             }  
        }
     
-      else 
+      else  //// for descending search
       {
         System.out.println("The array is in Descending order");
          if(k==a[mid]) // mid is the element 
