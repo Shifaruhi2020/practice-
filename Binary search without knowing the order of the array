@@ -10,7 +10,7 @@ public class Binarysearch
         //checking the order type of the given array 
             if(a[f]<a[l])
             {
-                return flag=1;
+                 flag=1;
             }
           
             
@@ -22,7 +22,7 @@ public class Binarysearch
             
             if(k==a[mid])// mid is the element
             {
-            System.out.println(mid);
+              
             return mid;
             }
             else if(k<a[mid]) // searching in the left side of arr
@@ -32,16 +32,18 @@ public class Binarysearch
             else // searching in the right side of the arr
             {
              f=mid+1;   
-            }  
+            }
+            
        }
     
       else  //// for descending search
       {
         System.out.println("The array is in Descending order");
+        
          if(k==a[mid]) // mid is the element 
             {
-            System.out.println(mid);
-             return mid;
+            
+            return mid;
             }
             else if(k<a[mid]) // searching the right side of the arr
             {
@@ -49,9 +51,11 @@ public class Binarysearch
             }
             else // searching the left side of the arr
             {
-               l=mid-1;   
-            }  
-         }
+               l=mid-1; 
+               
+            } 
+       
+ }
     return flag;
     
      }
@@ -59,8 +63,8 @@ public class Binarysearch
     // main method 
     public static void main(String[] args)
     {
-        int a[]={50,40,30,20,10};
-        int k=30;
+        int a[]={10,20,30,40,50};
+        int k=40;
         int l=a.length-1;
         binarySearch(a,0,l,k);
     }
