@@ -21,7 +21,7 @@ public class Permuatation
     
     public static void main(String[] args)
     {
-        System.out.println(permutation("god","dog"));
+        System.out.println(permutation("aab","aba"));
     }
 }
 
