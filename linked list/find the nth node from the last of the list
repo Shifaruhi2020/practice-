@@ -1,0 +1,54 @@
+public class LinkedList
+{
+    Node head;
+    //Node class
+    public class Node
+    {
+        int data;
+        Node next;
+        
+        Node(int d)
+        {
+            data=d;
+            next=null;
+        }
+    }
+    //function to get the required node
+    void printnthNode(int n)
+    {
+        int count=0;
+        Node temp1=head;
+        Node temp2=head;
+        while (count<n)
+        {
+            temp1=temp1.next;
+            count++;
+        }
+        while(temp1!=null)
+        {
+            temp1=temp1.next;
+            temp2=temp2.next;
+        }
+        
+        System.out.println(temp2);
+    }
+    
+    //adding the elements 
+    public void add(int data)
+    {
+        Node new1=new Node(data);
+        new1.next=head;
+        head=new1;
+    }
+    //main method
+     public static void main(String[] args)
+    {
+        LinkedList llist = new LinkedList();
+        llist.add(20);
+        llist.add(4);
+        llist.add(15);
+        llist.add(35);
+ 
+        llist.printnthNode(4);
+    }
+}
