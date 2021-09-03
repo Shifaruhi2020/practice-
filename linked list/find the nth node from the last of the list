@@ -30,7 +30,7 @@ public class LinkedList
             temp2=temp2.next;
         }
         
-        System.out.println(temp2);
+        System.out.println(temp2.data);
     }
     
     //adding the elements 
