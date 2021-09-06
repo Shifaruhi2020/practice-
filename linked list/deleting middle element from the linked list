@@ -17,9 +17,10 @@ public class Linkedlist
         return temp;
     }
     
-
     
     ///////METHOD FOR DELETING THE NODE///////////////////////////////////// 
+    
+    
     static Node delete(Node head)
 {
     if(head==null ||head.next==null)
@@ -52,6 +53,8 @@ static void print(Node head)
 
 
 /////////////MAIN METHOD/////////////////////
+
+
     public static void main(String[] args)
     {
        Node head = newNode(1);
