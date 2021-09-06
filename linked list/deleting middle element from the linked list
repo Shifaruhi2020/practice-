@@ -3,7 +3,7 @@ public class Linkedlist
 {
     Node head;
 
-public static class Node()
+ static class Node
 {
     int data;
     Node next;
