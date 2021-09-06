@@ -10,50 +10,50 @@ public class Linkedlist
     
     Node(int d)
     {
-        data=d;
+        this.data=d;
         next=null;
     }
 }
+//////////////INSERTION//////////////////////////////////////////
 
-public static Linkedlist insert(Linkedlist l,int data)
+public int insert(int data)
 {
-    Node new1=new Node();
-    new1.next=null;
-    if(l.head==null)
+    Node new1=new Node(data);
+    if(head==null)
     {
-        l.head=new1;
+        head=new1;
+        
     }
-    else 
+    
+    Node temp=head;
+    while(temp.next!=null)
     {
-        Node last=l.head;
-        while(last.next!=null)
-        {
-            last=last.next;
-        }
-        last.next=new1;
+        temp=temp.next;
     }
-    return l;
+   temp.next=new1;
+  return data;
 }
 
-public static void print(Linkedlist l)
+//////////////////PRINTING///////////////////////////////////
+
+void print()
 {
-    Node current=l.head;
-    if(current!=null)
+    Node temp=head;
+    while(temp!=null)
     {
-        System.out.println(current.data+" ");
-    }
-    else 
-    {
-        current=current.next;
+        System.out.println(temp.data+" ");
+        temp=temp.next;
     }
 }
-public Node delete(Node node)
+
+//////////////////////DELETING///////////////////
+static Node delete(Node head)
 {
-    if(node==null ||node.next==null)
+    if(head==null ||head.next==null)
     return null;
   
      Node slow,fast,prev;
-     slow=fast=prev=node;
+     slow=fast=prev=head;
     while(fast!=null &&fast.next!=null)
  {
     prev=slow;
@@ -61,23 +61,33 @@ public Node delete(Node node)
     fast=fast.next.next;
  }
  prev.next=slow.next;
- return  node;
+ return  head;
 }
 
+//////////NEW NODE ////////////
+ static Node newNode(int data)
+    {
+        Node temp = new Node();
+        temp.data = data;
+        temp.next = null;
+        return temp;
+    }
 
-//main class 
+
+/////////////MAIN METHOD/////////////////////
     public static void main(String[] args)
     {
-        Linkedlist a=new Linkedlist();
-        Node head=null;
-        head=a.insert(12,head);
-        head=a.insert(99,head);
-        head=a.insert(37,head);
-        head=a.insert(5,head);
-        head=a.insert(25,head);
-        
-        a.delete(head);
-        a.print(head);
-        
+       Node head = newNode(1);
+        head.next = newNode(2);
+        head.next.next = newNode(3);
+        head.next.next.next = newNode(4);
+ 
+        System.out.println("Given Linked List");
+        print(head);
+ 
+        head = delete(head);
+ 
+        System.out.println("Linked List after deletion of middle");
+        print(head);
     }
 }
