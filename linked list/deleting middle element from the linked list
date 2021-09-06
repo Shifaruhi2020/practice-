@@ -8,46 +8,19 @@ public class Linkedlist
     int data;
     Node next;
     
-    Node(int d)
-    {
-        this.data=d;
-        next=null;
-    }
 }
-//////////////INSERTION//////////////////////////////////////////
-
-public int insert(int data)
-{
-    Node new1=new Node(data);
-    if(head==null)
+     static Node newNode(int data)
     {
-        head=new1;
-        
+        Node temp = new Node();
+        temp.data = data;
+        temp.next = null;
+        return temp;
     }
     
-    Node temp=head;
-    while(temp.next!=null)
-    {
-        temp=temp.next;
-    }
-   temp.next=new1;
-  return data;
-}
 
-//////////////////PRINTING///////////////////////////////////
-
-void print()
-{
-    Node temp=head;
-    while(temp!=null)
-    {
-        System.out.println(temp.data+" ");
-        temp=temp.next;
-    }
-}
-
-//////////////////////DELETING///////////////////
-static Node delete(Node head)
+    
+    ///////METHOD FOR DELETING THE NODE///////////////////////////////////// 
+    static Node delete(Node head)
 {
     if(head==null ||head.next==null)
     return null;
@@ -64,14 +37,18 @@ static Node delete(Node head)
  return  head;
 }
 
-//////////NEW NODE ////////////
- static Node newNode(int data)
+
+//////////////////PRINTING///////////////////////////////////
+
+static void print(Node head)
+{
+    Node temp=head;
+    while(temp!=null)
     {
-        Node temp = new Node();
-        temp.data = data;
-        temp.next = null;
-        return temp;
+        System.out.println(temp.data+" ");
+        temp=temp.next;
     }
+}
 
 
 /////////////MAIN METHOD/////////////////////
@@ -91,3 +68,4 @@ static Node delete(Node head)
         print(head);
     }
 }
+
