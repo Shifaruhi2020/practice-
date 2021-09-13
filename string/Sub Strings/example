@@ -1,0 +1,16 @@
+public class Main
+{
+    public static String adding(String s, char c, int pos)
+    {
+        return s.substring(0,pos)+c+s.substring(pos);
+    }
+    
+    public static void main(String[] args)
+    {
+        String s=new String("Welcom");
+        char c='e';
+        int pos=6;
+        String new1= adding(s,c, pos );
+        System.out.println(new1);
+    }
+}
