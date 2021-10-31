@@ -1,0 +1,32 @@
+
+
+
+public class Main
+{static int i=2;
+static boolean prime(int n)
+{
+    if(n==0 || n==1)
+{
+    return false;
+}
+       if(n==i)
+{
+    return true;
+}
+        if(n%2==0)
+{
+    return false;
+}
+i++;
+return prime(n);
+
+}
+	public static void main(String[] args) {
+	if(prime(41))
+	{
+	    System.out.println("true");
+	}
+	else
+	System.out.println("false");
+	}
+}
