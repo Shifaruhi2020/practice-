@@ -1,0 +1,44 @@
+
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+class Main {
+    public static int[] twoSum(int[] nums, int target) {
+         int comp=0;
+        Map<Integer,Integer> new_map=new HashMap<>();
+         for(int i=0;i<nums.length;i++)
+         {
+             comp=target-nums[i];
+             
+             if(new_map.containsKey(comp))
+             {
+                 int solution;
+                 solution=new_map.get(comp);
+                 System.out.println(solution);
+                 System.out.println(i);
+                 
+             return new int[] {solution,i};
+               
+             }
+             
+             new_map.put(nums[i],i);
+         }
+        
+        throw new IllegalArgumentException("cant find");
+}
+
+public static void main (String[] args) {
+    int n;
+    int t;
+     Scanner sc=new Scanner(System.in);
+     n=sc.nextInt();
+     System.out.println("enter Target");
+     t=sc.nextInt();
+     int arr[]=new int[26];
+     for(int i=0;i<n;i++)
+     {
+         arr[i]=sc.nextInt();
+}
+System.out.print(twoSum(arr,t));
+    }
+}    
