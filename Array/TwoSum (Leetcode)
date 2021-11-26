@@ -39,6 +39,7 @@ public static void main (String[] args) {
      {
          arr[i]=sc.nextInt();
 }
-System.out.print(twoSum(arr,t));
+
+twoSum(arr,t);
     }
 }    
