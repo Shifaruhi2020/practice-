@@ -40,6 +40,13 @@ public static void main (String[] args) {
          arr[i]=sc.nextInt();
 }
 
-twoSum(arr,t);
+int result=new int[2];
+result=twoSum(arr,t);                                        ////instead of this all i can also just call the twoSum method 
+for(int i=0;i<result.length;i++)
+{
+System.out.print(result[i]);
+}
+
+
     }
 }    
