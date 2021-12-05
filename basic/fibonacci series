@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class Main{
+     static void fib(int i,int j,int N){
+        int counter=0;
+        //series
+        
+        while(counter<N){
+            //printing number
+             
+            System.out.println(i + " ");
+            //swaping 
+            int k=j+i;
+            i=j;
+            j=k;
+            counter=counter+1;
+        }
+    }
+    
+    //drivers code
+    public static void main (String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n;
+        System.out.println("enter N");
+        n=sc.nextInt();
+        int first,second;
+         System.out.println("enter first number");
+        first=sc.nextInt();
+         System.out.println("enter second number");
+        second=sc.nextInt();
+        System.out.println("Series is:");
+        fib(first,second,n);
+        
+    }
+}
+
