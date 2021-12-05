@@ -13,7 +13,7 @@ static boolean prime(int n)
 {
     return true;
 }
-        if(n%2==0)
+        if(n%i==0)
 {
     return false;
 }
