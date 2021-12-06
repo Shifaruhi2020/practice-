@@ -1,0 +1,16 @@
+class Main{
+    public static void main (String[] args) {
+        Sub s=new Sub();
+        s.see();
+        Main m=new Main();
+        m.see();
+    }
+    public void see(){
+        System.out.println("Iam from parent class");
+    }
+}
+class Sub extends Main{
+    public void see(){
+        System.out.println("iam from child");
+    }
+}
