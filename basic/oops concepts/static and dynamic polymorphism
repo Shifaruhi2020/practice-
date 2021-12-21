@@ -1,0 +1,49 @@
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	
+		Another a=new Another();
+		System.out.println(a.add());
+		Main m=new Main();
+		System.out.println(m.add());
+		m.sub(10,1);
+		m.sub(10,1,2);
+	}
+	public static int add(){
+	    int a,b,c=0;
+	   a=10;
+	   b=10;
+	    c=a+b;
+	    return c;
+	    
+	}
+	
+	//method overloading :methods having same name and different parameters and return types
+	public void sub(int i,int j){
+	    int c=0;
+	    c=i-j;
+	    System.out.println(c);
+	}
+	
+		public void sub(int i,int j,int p){
+	    int c=0;
+	    c=i-j-p;
+	    System.out.println(c);
+	}
+}
+ class Another{
+     
+     //method add is present in main class
+     //method overrirding : parent class are inherited by subclass 
+    public static int add(){
+        int a,b,d,c=0;
+        a=10;
+        b=2;
+        d=3;
+        c=a+b+d;
+        return c;
+        
+    }
+}
