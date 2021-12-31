@@ -1,5 +1,31 @@
-class Solution {
-    public int findGCD(int[] nums) {
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		Scanner sc=new Scanner(System.in);
+		int n;
+		System.out.println("Enter the length");
+		n=sc.nextInt();
+		int[] a=new int [n];
+		System.out.println("Enter the elements");
+		for(int i=0;i<n;i++){
+		
+		    a[i]=sc.nextInt();
+		}
+	System.out.println("GCD is="+findGCD(a));
+	}
+	
+	
+   static public int findGCD(int[] nums) {
         int n;
         n=nums.length-1;
         Arrays.sort(nums);
@@ -8,7 +34,7 @@ class Solution {
         return isgcd(min,max);
     }
     
-    int isgcd(int a,int b){
+   static int isgcd(int a,int b){
         if(b>a){
             return isgcd(b,a);
         }
