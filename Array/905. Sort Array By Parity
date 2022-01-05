@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("enter length");
+	    int n=sc.nextInt();
+	    int[] arr=new int[n];
+	    System.out.print("enter array");
+	    for(int i=0;i<n;i++){
+	        arr[i]=sc.nextInt();
+	    }
+	    System.out.println("sorted array is:");
+	    
+	    int[] result=new int[n];
+result=sort(arr);                                       
+for(int i=0;i<result.length;i++)
+{
+System.out.println(result[i]);
+}
+	}
+	
+	public static int[] sort(int[] a){
+	    int index=0;
+	    for(int i=0;i<a.length;i++){
+	        if(a[i]%2==0){
+	            int temp=a[index];
+	            a[index++]=a[i];
+	            a[i]=temp;
+	        }
+	    }
+	return a;
+	}
+}
