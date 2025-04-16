@@ -1,3 +1,5 @@
+// solution from chatgpt
+// dynamic programming solution for reference :https://www.youtube.com/watch?v=E2-heUEnZKU
 class Solution {
     public int maxProfit(int[] prices) {
         int left = 0;
