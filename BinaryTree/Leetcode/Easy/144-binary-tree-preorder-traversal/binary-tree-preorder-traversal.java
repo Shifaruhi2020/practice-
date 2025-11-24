@@ -13,6 +13,7 @@
  *     }
  * }
  */
+//  Link for solution : https://www.youtube.com/watch?v=RlUu72JrOCQ&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=6
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
