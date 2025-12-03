@@ -17,7 +17,7 @@ Boundary Traversal of Binary Tree
 <p>&nbsp;</p>
 
 <p><strong class="example">Example 1:</strong></p>
-<img src=https://files.codingninjas.in/boundarytraversal-5149.png>
+<img src="https://files.codingninjas.in/boundarytraversal-5149.png">
 
 <pre>
 <strong>Input:</strong> root = [20,8,22,4,12,null,25,null,null,10,14]
