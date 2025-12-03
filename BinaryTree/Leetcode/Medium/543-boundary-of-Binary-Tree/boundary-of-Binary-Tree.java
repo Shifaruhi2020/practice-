@@ -13,6 +13,8 @@
  *     }
  * }
  */
+// solution link : https://www.youtube.com/watch?v=0ca1nvR0be4&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=21
+// solution followed from chatGPT
 class Solution {
     public List<Integer> boundaryOfBinaryTree(TreeNode root) 
     {
