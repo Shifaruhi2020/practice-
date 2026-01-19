@@ -1,5 +1,4 @@
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
+// code from chatGPT
 class Graph {
     
     private int vertices;
