@@ -34,6 +34,7 @@ class Main {
         
         int V = 10;
         
+        // to add a new ArrayList<> [empty] to the respective edges  
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
         
         for(int i =0; i < V; i++){
