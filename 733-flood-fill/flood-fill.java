@@ -1,46 +1,29 @@
-import java.util.*;
-
-class Pair{
-    int row;
-    int col;
-    Pair(int row, int col){
-        this.row = row;
-        this.col = col;
-    }
-}
+// chatGPT for code
 class Solution {
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
+
+        int originalColor = image[sr][sc];
+
+        if(originalColor == color) return image;
+
+        dfs(sr, sc, image, originalColor, color);
+
+        return image;
+    }
+    
+    public void dfs(int r, int c, int[][] image, int originalcolor, int color){
+
         int n = image.length;
         int m = image[0].length;
 
-        int[] drow = {-1, 0, 1, 0};
-        int[] dcol = {0, 1, 0, -1};
-
-        Queue<Pair> q = new LinkedList<>();
-
-        int originalcolor = image[sr][sc];
-
-        if(originalcolor == color) return image;
-
-        image[sr][sc] = color;
-
-        q.add(new Pair(sr, sc));
-
-        while(!q.isEmpty()){
-            Pair curr = q.remove();
-
-            for(int i = 0; i < 4; i++){
-
-            int nextSR = curr.row + drow[i];
-            int nextSC = curr.col + dcol[i];
-
-            if(nextSR >= 0 && nextSR <n && nextSC >= 0 && nextSC < m && originalcolor == image[nextSR][nextSC]){
-                q.add(new Pair(nextSR, nextSC));
-                image[nextSR][nextSC] = color;
-            }
+        if(r >=0 && r < n && c >= 0 && c < m && image[r][c] == originalcolor){
+            image[r][c] = color;
+            dfs(r - 1, c, image, originalcolor, color);
+            dfs(r, c + 1, image, originalcolor, color);
+            dfs(r + 1, c, image, originalcolor, color);
+            dfs(r, c - 1, image, originalcolor, color);
         }
-        }
-        
-        return image;
+        return;
     }
+
 }
