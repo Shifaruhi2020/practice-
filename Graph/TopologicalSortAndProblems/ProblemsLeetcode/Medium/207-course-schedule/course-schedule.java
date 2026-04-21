@@ -1,3 +1,4 @@
+// solution link : https://www.youtube.com/watch?v=WAOfKpxYHR8&feature=youtu.be
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         int n = prerequisites.length;
