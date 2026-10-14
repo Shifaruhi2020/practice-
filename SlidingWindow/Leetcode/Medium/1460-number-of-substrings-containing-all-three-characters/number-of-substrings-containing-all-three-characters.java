@@ -1,3 +1,4 @@
+// soltion link : https://www.youtube.com/watch?v=xtqN4qlgr8s
 class Solution {
     public int numberOfSubstrings(String s) {
 
