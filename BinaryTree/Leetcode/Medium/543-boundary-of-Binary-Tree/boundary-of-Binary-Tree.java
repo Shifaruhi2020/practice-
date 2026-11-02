@@ -71,7 +71,6 @@ class Solution {
 
         if(isLeaf(node)){
             result.add(node.val);
-            return;
         }
 
         addLeaf(node.left, result);
